@@ -35,7 +35,7 @@ const PlayerListPDF = ({players, gotoDash}) => {
     // Title and Subtitle
     doc.setFontSize(25);
     doc.setTextColor(60);
-    doc.text("Achirou BlueCo Elite Scouting", startX, startY, { align: "center" });
+    doc.text("Achirou Elite Scouting", startX, startY, { align: "center" });
 
     doc.setFontSize(12);
     doc.setTextColor(100);
@@ -68,7 +68,7 @@ const PlayerListPDF = ({players, gotoDash}) => {
     });
 
     // Save the PDF
-    doc.save('Achirou BlueCo Elite Scouting Summary Report.pdf');
+    doc.save('Achirou Elite Scouting Summary Report.pdf');
     gotoDash();
   };
 
