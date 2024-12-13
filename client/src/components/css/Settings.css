@@ -1,0 +1,12 @@
+.settings_wrapper{
+    display: flex;
+    align-items: center;
+    padding: 6rem 10rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.settings_wrapper > button{
+    width: 100%;
+}

@@ -1,0 +1,133 @@
+   .form-container{
+    width: 100vw;
+    height: 100vh ;
+    overflow-y: scroll;
+
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .survey-form {
+    margin: 0 auto;
+    max-height: 95vh;
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+    overflow-y: scroll;
+    z-index: -1;
+  }
+  
+
+  /* xxxxxxxxxxxxxxxxxx */
+  
+  .evaluation-question {
+     display: flex;
+     margin-bottom: 2rem;
+     justify-content: center;
+     padding-bottom: 1rem;
+     border-bottom: solid 1px #55555554;
+     box-sizing: border-box;
+  }
+  
+  .evaluation-question > span {
+      flex: 1;
+      color: #555;
+      font-size: 1.2rem;
+  }
+  
+  /* Radio button group */
+  .radio-button-group {
+    display: flex;
+    gap: 2.5rem;
+  }
+  
+  /* Hide default radio buttons */
+  input[type="radio"] {
+    display: none;
+  }
+  
+  /* Button-style radio labels */
+  .radio-button {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .radio-button.active {
+    background-color: #4caf50;
+    color: #fff;
+    border-color: #4caf50;
+  }
+  
+  /* Hover effect */
+  .radio-button:hover {
+    background-color: #21492246;
+    color: #fff;
+    border-color: #4caf50;
+  }
+  
+  /* Submit button */
+  .submit-button {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 40%;
+    transform: translateX(70%);
+  }
+  
+  /* Evaluation results */
+  .evaluation-results {
+    margin-top: 30px;
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .evaluation-results h3 {
+    text-align: center;
+  }
+
+   /*Dialog Boxes*/
+
+.dialogStyles{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  height: 100vh;
+}
+
+.dialogContent{
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.note-header{
+  text-align: left;
+}
+
+#notes{
+  width: 100%;
+}

@@ -1,0 +1,148 @@
+   .form-container{
+    width: 100vw;
+    height: 100vh ;
+    overflow-y: scroll;
+
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .survey-form {
+    margin: 0 auto;
+    max-height: 85vh;
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+    overflow-y: scroll;
+    z-index: -1;
+  }
+
+  /* xxxxxxxxxxxxxxxxxx */
+  
+  .evaluation-q{
+     margin-bottom: 2rem;
+     padding-bottom: 1rem;
+     border-bottom: solid 1px #55555554;
+     box-sizing: border-box;
+  }
+
+  .evaluation-q > .question > textarea{
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .evaluation-q > .question > span {
+    flex: 1;
+    color: #555;
+    font-size: 1.2rem;
+}
+
+  textarea:focus {
+    border-color: #4caf50; /* Green for soccer theme */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+    outline: none;
+  }
+  
+
+  /* Submit button */
+  .submit-button {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 40%;
+    transform: translateX(70%);
+  }
+  
+  /* Evaluation results */
+  .evaluation-results {
+    margin-top: 30px;
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .evaluation-results h3 {
+    text-align: center;
+  }
+
+   /*Dialog Boxes*/
+
+.dialogStyles{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  height: 100vh;
+}
+
+.dialogContent{
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.links-header{
+  border:  1px solid var(--text);
+  padding: 8px 0; 
+  box-sizing: border-box;
+  text-align: center;
+  color: #555;
+  margin: 0;
+}
+
+.video-link{
+  padding: 5px 5px 16px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.video-link > button{
+  flex: 0.05;
+}
+.link-input{
+  flex: 0.95;
+}
+
+.xca{
+  margin-bottom: 5px;
+}
+
+.linkList{
+
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+}
+
+.linkList > .link{
+  border:  1px solid var(--text);
+  margin-bottom: 8px;
+  padding: 5px 15px;
+}
+
+.link {
+  font-size: 16px;
+  color: #555;
+}
+
+.link:hover{
+  color: black;
+}

@@ -1,0 +1,63 @@
+/* General Layout */
+
+@media only screen and (max-width: 480px) {
+  .login-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .welcome-logo {
+    flex: 0;
+  }
+  .welcome-logo > img{
+    height: 10rem;
+  }
+
+  .welcome-logo > h1{
+    display: none;
+  }
+  
+  .login-box > h1 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .login-box{
+    display: block;
+    background: var(--bkg);
+  }
+
+  .login-button{
+    width: 100%;
+    background: var(--altText);
+    color: var(--text);
+  }
+  
+
+
+}
+
+
+
+.additional-options {
+  margin-top: 20px;
+}
+
+.additional-options a {
+  margin: 0 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.additional-options a:hover {
+  color: #4caf50;
+}
+
+/* Button hover soccer glow */
+.login-button:hover {
+  box-shadow: 0 0 20px rgba(76, 175, 79, 0.151), 0 0 40px rgba(76, 175, 80, 0.7);
+}

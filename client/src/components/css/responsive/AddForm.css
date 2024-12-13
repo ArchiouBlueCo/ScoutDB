@@ -1,0 +1,79 @@
+@media only screen and (max-width: 480px) {
+  .registration-form-wrapper{
+    overflow-y: scroll;
+    max-height: 70vh;
+    padding: 0 5rem;
+  }
+  
+.registration-form > input, select{
+    min-width: 100%;
+  }
+
+  .registration-form{
+    /* text-align: center;  */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1.2rem;    
+    
+  }
+   
+  .registration-form > button{
+    width: 70%;
+  }
+
+  .flagMsg{
+    margin-top: 0.6rem;
+    text-align: center;
+  }
+  
+  .form-step {
+    width: 250%; /* Each form takes full width */
+    padding: 1rem 0 0 0;
+    box-sizing: border-box;
+  }
+
+  .form-step > h2{
+    margin-bottom: 1.5rem;
+  }
+  
+  
+  
+  button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  .btnsub{
+    width: 100%;
+    text-align: center;
+  }
+
+  .btnsub > button{
+    width: 100%;
+    margin-bottom: 4.5rem;
+  }
+
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+
+    width: 80%;
+    position: absolute;
+    bottom: 1.5rem;
+  }
+  
+  .navigation-buttons > button {
+    padding: 0.5rem 1rem;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 6rem;
+  }
+}  
+  
+  

@@ -1,0 +1,224 @@
+.container{
+    width: 100%;
+    height: 100%;
+    flex-grow: 0.9;
+    background-color: var(--bkg);
+    box-sizing: border-box;
+    color:var(--altText);
+    border-left: solid 1px var(--text);
+    position: relative;
+    overflow-y: auto;
+}
+
+.overhead{
+  position: fixed;
+  width: 100%;
+  padding-bottom: 1rem;
+  z-index: 5;
+  background: var(--bkg);
+}
+
+/* Holder of avatar icon */
+.avatar_section{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 50px;
+  width: 80%;
+  gap: 0.5rem;
+  border-bottom: solid 1px var(--text);
+  padding-right: 1.3rem;
+}
+
+.avatar_section .user-icon{
+  font-size: 1.3rem;
+  color: var(--altText);
+}
+
+/* Filter section with icons */
+.filter{
+  display: flex;
+  align-items: center;
+  flex-grow: 0.6;
+  padding: 1rem 0 0 2rem;
+  gap: 1rem;
+  position: relative;
+}
+
+.filter > input{
+  box-shadow: 0 0 1px rgba(76, 175, 79, 0.342);
+  width: 40%;
+  font-size: 1rem;
+} 
+
+.filter .filterIcon{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  color: #aaa;
+  font-size: 1.2rem;
+}
+
+.filter .filterIcon:hover{
+  color: var(--primary);
+  transition: ease-in-out 0.7s;
+  color: #272727;
+}
+
+.filter-section{
+  position: absolute;
+  top: 4rem;
+  background-color: var(--filter);
+  display: flex;
+  padding: 1rem 1rem;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 30%;
+  border-radius: 1rem;
+}
+
+.filter-section > h3{
+  color: #fefefe;
+}
+
+.filter-option{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+} 
+
+.filter-option > input {
+  max-width: 6rem;
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  display: flex;
+}
+
+.table{
+  padding: 7rem 2rem;
+}
+
+
+.player-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+  }
+  
+  th {
+    color: var(--bkg);
+    cursor: pointer;
+
+  }
+
+  thead {
+    position: sticky;
+    top: 7.7rem;
+    background-color: var(--primary);
+    z-index: 1; /* Ensures the header stays on top */
+  }
+
+  thead th:hover .arrow {
+    color: var(--altText);
+  }
+  
+  .arrow {
+    font-size: 0.8em;
+    color: var(--text);
+    margin-left: 8px;
+  }
+  
+  tbody tr:hover {
+    background-color: #00661f10;
+    cursor: pointer;
+  }
+
+  .player-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .nationality{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 1rem ;
+  }
+
+.status div{
+    padding: 0.5rem 0.5rem;
+    margin: auto auto;
+    max-width:50%;
+    border-radius: 50%;
+  }
+  
+  .status div.signed {
+    background-color: #28a745;
+  }
+  
+  .status div.leave {
+    background-color: #dc3545;
+  }
+  
+  .status div.trials {
+    background-color: #eeff00;
+  }
+  
+  .status div.follow {
+    background-color: #ffc107;
+  }
+
+  .hover-info {
+    position: absolute;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  /* Handle evaluation pop */
+
+  .evalution-pop{
+    position: absolute;
+    background: var(--bkg);
+    z-index: 111;
+    width: 80%;
+    height: 100vh;
+    border-left: solid 1px #aaa;
+  }
+
+
+  .tooltip {
+    position: relative;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

@@ -1,0 +1,116 @@
+:root {
+  font-family:Poppins;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: black;
+  background-color: #242424;
+
+  overflow-y: hidden;
+  -webkit-scrollbar {
+  display: none;
+  
+}
+
+/* Hide scrollbar for Firefox */
+  * {
+    scrollbar-width: none; /* For Firefox */
+  }
+
+  --primary: #3aabd1;
+  --seocondary: #fafafa;
+  --hover: #769fc2;
+  --filter: #292880;
+  --text: #ebebeb;
+  --altText: #002a65;
+  --bkg: #fcfcfc;
+
+  /* --primary: #010e09;
+  --seocondary: #fafafa;
+  --hover: #035a3d#002a65;
+  --filter: #288062;
+  --text: #ccc;
+  --altText: #1c1c1c;
+  --bkg: #fff; */
+
+
+}
+
+li{
+  list-style: none;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--hover);
+}
+
+h1,h2,h3,p,h5{
+  margin: 0;
+}
+
+h2{
+  color: #333;
+  text-align: center;
+}
+
+*{
+  box-sizing: border-box;
+  font-family:Poppins;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary);
+  color: var(--bkg);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  background-color: var(--hover);
+  color: white;
+}
+button:focus,
+button:focus-visible {
+  outline: none auto -webkit-focus-ring-color;
+}
+
+input{
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: var(--hover); /* Green for soccer theme */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+input[type=button]{
+  width: 70%
+}
+
+.holder{
+  min-width: 100%;
+  max-width: 100%;
+}

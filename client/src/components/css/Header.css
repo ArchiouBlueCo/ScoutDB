@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 2rem;
+    background-color: var(--seocondary);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 2.7rem;
+  }
+  
+  .logo img {
+    height: 1.8rem
+  }
+  
+  .header-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-avatar .avatar {
+    width: 2rem;
+    height:2rem;
+    border-radius: 50%;
+    border: 1px solid #00000000; /* Optional: Add a border around avatar */
+  }
+  
