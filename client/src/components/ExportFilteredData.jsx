@@ -2,7 +2,7 @@ import React, { useState , useEffect} from 'react';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import './css/ExportFilteredData.css'
-import logo from '/African Talent.png';
+import logo from '/chelsea.png';
 
 
 const PlayerListPDF = ({players, gotoDash}) => {
