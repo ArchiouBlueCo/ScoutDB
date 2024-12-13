@@ -45,7 +45,7 @@ const LoginPage = () => {
     <div className="login-container">
       <div className="welcome-logo">
         <img src={logo} alt="" />
-        <h1 >Achirou BlueCo</h1>
+        <h1 >Achirou</h1>
         <h1>Elite Scouting</h1>
       </div>
       <div className="login-box">
