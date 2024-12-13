@@ -99,7 +99,7 @@ const Dashboard = () => {
         <div className='sidebar'>
           <div className="logo">
               <img src="/chelsea.png" alt="" />
-              <h4>Achirou BlueCo</h4>
+              <h4>Achirou Scouting</h4>
           </div>
           <ul>
               <li onClick={() => handleComponentChange(`A`)}>
