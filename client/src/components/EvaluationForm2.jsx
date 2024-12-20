@@ -10,7 +10,7 @@ const EvaluationForm2 = ({newPlayerId}) => {
       {id: 'In_Posession', label: "In Posession",},
       {id: 'Out_of_Posession', label: "Out of Posession",},
       {id: 'Weakness', label: "Weakness",},
-      {id: 'Summary', label: "Summary",},
+      {id: 'Summary', label: "Summary",}, 
     ];
     
       const [ratings, setRatings] = useState({});
