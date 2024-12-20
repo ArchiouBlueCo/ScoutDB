@@ -1,0 +1,14 @@
+# Ignore build files
+node_modules/
+client/node_modules/
+uploads/
+client/src/services/
+
+#Ignore .env
+/.env
+
+#Ignore package-lock.json
+/package-lock.json
+/client/package-lock.json
+/request.http
+/client/src/services/apiService.js

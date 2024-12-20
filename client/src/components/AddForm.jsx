@@ -113,21 +113,35 @@ const AddForm = ({scoutName}) => {
     // Automatically close the dialog after 2 seconds
     setTimeout(() => {
       setShowDialog(false);
-    }, 2000);
+    }, 20000);
   }
+
+  const emptyFieldString = (field) => {
+    return field.length === 0 ? "N/A" : field;
+}
+
+const emptyFieldNumber = (field) => {
+    return field.length === 0 ? 0 : field;
+}
 
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    console.log("position: " + playerData.position);
+    console.log("nationality: " + playerData.nationality);
+    console.log("foot: " + playerData.foot);
+    console.log("gender: " + playerData.gender);
+    console.log("status: " + playerData.status);
     if (
-      playerData.gender.length === 0 || playerData.status.length === 0 || playerData.nationality.length === 0
+      playerData.gender.length === 0 || playerData.status.length === undefined || playerData.nationality.length === undefined
       || playerData.foot.length === 0 || playerData.position.length === 0
     ) {
       setFlagMessage("Kindly enter all the details of the player");
       setIsVisible(true);
-      console.log("empty forms");
       setLoading(false);
+      handleDialog();
+      console.log("empty forms");
     } else {
       const countrySearch = africanCountries.find((africanCountry) => africanCountry.name === playerData.nationality);
     
@@ -148,15 +162,15 @@ const AddForm = ({scoutName}) => {
     formData.append('Preferred_Foot', playerData.foot);
     formData.append('Region_scouted_in', playerData.region);
     formData.append('Club', playerData.club);
-    formData.append('Number_of_agent', playerData.agentTel);
-    formData.append('Agent', playerData.agentName);
+    formData.append('Number_of_agent', emptyFieldString(playerData.agentTel));
+    formData.append('Agent', emptyFieldString(playerData.agentName));
     formData.append('Image', playerData.image);
     formData.append('Nationality', playerData.nationality);
     formData.append('NationalityISO', countrySearch.code);
     formData.append('Status', playerData.status);
     formData.append('Scouted_By', scoutName);
     formData.append('Contract', playerData.contract);
-    formData.append('Market_Value', playerData.marketValue);
+    formData.append('Market_Value', emptyFieldNumber(playerData.marketValue));
     formData.append('Date_Added', getTodayDate());
 
       
@@ -196,7 +210,18 @@ const AddForm = ({scoutName}) => {
 
   return(
     <div className="add-form-container">
-      
+    
+    {showDialog && (
+        <div className="addDialog">
+          <div className="dialogContent">
+            <h3>Some Fields must be filled</h3>
+            <p>[Nationality, Status, Gender, Preferred Foot, Position]</p>
+            <button onClick={() => setShowDialog(false)}>Close</button>
+          </div>
+        </div>
+      )}
+
+
     <div className="form-wrapper" style={{ transform: `translateX(-${step * 50}%)`}}>
       {/* Form 1 */}
       <div className="form-step">

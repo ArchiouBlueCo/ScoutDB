@@ -46,24 +46,50 @@ const EvaluationView = ({player}) => {
             return date.toLocaleDateString();  // This will format the date according to the user's locale
         };
 
-        const renderEvaluation = () => {
-            return Object.entries(ratings).map(([key, value]) => {
-                const header = key.replace(/_/g, " ");
-                if(!(key.toUpperCase() === "PLAYER_ID" || key.toUpperCase() === "_ID" || key.toUpperCase() === "NOTE")){
-                    return (
-                        <div key={key} className="noteView">
-                            <span>{header}</span>
-                            <div className="noteValue">
-                                {value}
-                            </div>
-                        </div>
-                    ); 
-                }
+        
+
+        // const renderEvaluation = () => {
+        
+        //     const predefinedOrder = ["Physicality", "In_Posession", "Out_of_Posession", "Weakness", "Summary"];
+            
+        //     const evaluationArray = Object.values(ratings);
+
+
+        //     const sortedEvaluationArray = evaluationArray.sort(
+        //     (a, b) => predefinedOrder.indexOf(a.id) - predefinedOrder.indexOf(b.id)
+        //     );
+
+        //     const sortedEvaluationObject = Object.fromEntries(
+        //     sortedEvaluationArray.map((item) => [item.id, item])
+        //     );
+
+        //     console.log("x" + sortedEvaluationObject);
+        //     // Predefined order
+            
+
+        //     // Sort based on predefined order
+        //     const sortedRatings = Object.entries(ratings).sort(
+        //         ([keyA], [keyB]) => predefinedOrder.indexOf(keyA) - predefinedOrder.indexOf(keyB)
+        //     );
+
+        //     return Object.entries(ratings).map(([key, value]) => {
+        //         const header = key.replace(/_/g, " ");
+        //         if(!(key.toUpperCase() === "PLAYER_ID" || key.toUpperCase() === "_ID" || key.toUpperCase() === "NOTE")){
+        //             return (
+        //                 <div key={key} className="noteView">
+        //                     <span>{header}</span>
+        //                     <div className="noteValue">
+        //                         {value}
+        //                     </div>
+        //                 </div>
+        //             ); 
+        //         }
                 
-            });
-        }
+        //     });
+        // }
 
          // Handle changes for input fields
+        
          const handleInputChange = (e) => {
             const { name, value } = e.target;
             setLink((prevData) => ({
@@ -135,10 +161,6 @@ const EvaluationView = ({player}) => {
                     <p>{player.Scouted_By}</p>
                 </div>
                 <div className="personal_detail">
-                    <span>Region Scouted: </span>
-                    <p>{player.Region_scouted_in}</p>
-                </div>
-                <div className="personal_detail">
                     <span>Agent: </span>
                     <p>{player.Agent}</p>
                 </div>
@@ -158,7 +180,29 @@ const EvaluationView = ({player}) => {
             <div className="player-evaluation">
             <h3>Evaluation Metrics</h3>
             <div  className="evaluation-metrics">
-                {isRate && renderEvaluation()} 
+                
+            <ul className="linkList">
+                    <div className="noteView">
+                        <span>Physicality</span>
+                        <div className="noteValue">{ratings["Physicality"]}</div>
+                     </div>                   
+                    <div className="noteView">
+                        <span>In Possession</span>
+                        <div className="noteValue">{ratings["In_Possession"]}</div>
+                     </div>                   
+                    <div className="noteView">
+                        <span>Out of Posession</span>
+                        <div className="noteValue">{ratings["Out_of_Posession"]}</div>
+                     </div>                   
+                    <div className="noteView">
+                        <span>Weakness</span>
+                        <div className="noteValue">{ratings["Weakness"]}</div>
+                     </div>                   
+                    <div className="noteView">
+                        <span>Summary</span>
+                        <div className="noteValue">{ratings["Summary"]}</div>
+                     </div>                   
+                </ul>
             </div>
             </div>
 
@@ -175,18 +219,7 @@ const EvaluationView = ({player}) => {
                         <FontAwesomeIcon icon={faAdd}/>
                     </button>
                 </form>
-                <ul className="linkList">
-                    {
-                        Object.entries(linkList).map(([index,i])=>{
-                            const formattedUrl = i.url.startsWith("http") ? i.url : `https://${i.url}`;
-                            return (
-                                <li key={(linkList.length + 5)} className="link">
-                                    <a href={formattedUrl} className="link" target="_blank" rel="noopener noreferrer">{i.title}</a>
-                                </li>
-                            )
-                        })
-                    }                    
-                </ul>
+                
             </div>
         </div>
     </div>
