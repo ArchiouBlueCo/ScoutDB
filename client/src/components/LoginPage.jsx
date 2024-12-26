@@ -26,6 +26,8 @@ const LoginPage = () => {
       if (response) {
         // Store the token (optional - for authentication purposes)
         localStorage.setItem("jwtToken", response["token"]);
+        localStorage.setItem("name", response["name"]);
+        localStorage.setItem("_id", response["scoutId"]);
 
         // Redirect to the dashboard page after successful login
         navigate("/dashboard", { state: { message: response["scoutId"] , _scoutName: response["name"]} });
