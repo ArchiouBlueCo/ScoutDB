@@ -15,7 +15,6 @@ const Dashboard = () => {
   const location = useLocation();
   const [loginId, setLoginId] = useState(); 
   const [scoutName, setScoutName] = useState(); 
-  // const scoutName = location.state?._scoutName; // Access the state passed via navigate
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const [selectedComponent, setSelectedComponent] = useState('A');
@@ -35,6 +34,8 @@ const Dashboard = () => {
             navigate("/dashboard");
         } catch (error) {
             localStorage.removeItem('jwtToken'); // Clear invalid token
+            localStorage.removeItem('name');
+            localStorage.removeItem('scoutId');
             navigate('/'); // Redirect to homepage
         }
     };
@@ -48,6 +49,8 @@ const Dashboard = () => {
         clearTimeout(timer);
         timer = setTimeout(() => {
             localStorage.removeItem('jwtToken'); // Clear token
+            localStorage.removeItem('name');
+            localStorage.removeItem('scoutId');
             window.location.href = '/'; // Redirect to homepage
         }, 5 * 60 * 1000); // 5 minutes inactivity
     };
@@ -85,6 +88,8 @@ const Dashboard = () => {
   const handleLogout = () => {
     
     localStorage.removeItem("jwtToken");  // Remove JWT token
+    localStorage.removeItem('name');
+    localStorage.removeItem('scoutId');
     navigate("/");  // Redirect back to login page
   };
 
