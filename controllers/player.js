@@ -127,10 +127,15 @@ const deletePlayers = async (req, res) => {
      const db_connect = dbo.getDb()
      const id = { _id: new ObjectId(req.params.id) }
      try{
-          const player = await db_connect.collection("player").deleteOne(id)
+          const player = await db_connect.collection("player").findOneAndDelete(id)
           if (!player) {
                return res.status(404).json({message: "cannot find any player with ID ${id}"})
           }
+          const imgUrl =  player.Image
+          const imgUrlEdited = `uploads/${imgUrl.split("/uploads/")[1].split(".")[0]}`
+          const result = await cloudinary.api.delete_resources([`${imgUrlEdited}`], 
+               { type: 'upload', resource_type: 'image' })
+             .then(console.log("del successful"))
           res.status(200).json(player)
      }
      catch(error){
