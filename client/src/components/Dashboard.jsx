@@ -22,8 +22,8 @@ const Dashboard = () => {
 
   useEffect(() => {
     // const location = useLocation();
-    setLoginId(location.state?.message);
-    setScoutName(location.state?._scoutName); // Access the state passed via navigate
+    setLoginId(localStorage.getItem('scoutId'));
+    setScoutName(localStorage.getItem('name')); // Access the state passed via navigate
 
     const verifyToken = async () => {
         const token = localStorage.getItem('jwtToken');
